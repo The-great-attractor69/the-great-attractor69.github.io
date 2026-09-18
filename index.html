@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Atta Ullah | Data Visualization, QMS, Internal Auditing, IQC and Analytics">
+<title>Atta Ullah | Data, Quality & Systems</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{display:['Fraunces','serif'],sans:['IBM Plex Sans','sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient a"></div><div class="ambient b"></div><div class="noise"></div><div id="progress"></div>
+<header class="nav glass">
+  <a class="brand" href="#home">au<span>.</span></a>
+  <nav>
+    <a class="active" href="#home">Home</a>
+    <a href="#work">Work</a>
+    <a href="#audit">Audit</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button id="openCli">~ Terminal</button>
+    <a href="mailto:attaullahkhokhar23@gmail.com"><i></i> Open to Work</a>
+  </div>
+</header>
+<main>
+<section id="home" class="hero shell reveal">
+  <div class="hero-copy glass">
+    <span class="eyebrow"><i></i> Data Visualization · Quality Systems · Analytics</span>
+    <h1>Atta<br><em>Ullah.</em></h1>
+    <p class="lead">I turn complex data, quality records, and reporting needs into clear systems that are easy to read, audit, and act on.</p>
+    <div class="chips">
+      <span>20+ Power BI Dashboards</span>
+      <span>30+ Excel Dashboards</span>
+      <span>8 Audit Rounds</span>
+      <span>17 Departments</span>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#work">Explore Work ↗</a>
+      <button class="btn" id="heroCli">Command Center ⌘</button>
+    </div>
+    <div class="hero-foot">
+      <span>Karachi, Pakistan</span>
+      <span>QMS · IQC · Reporting</span>
+    </div>
+  </div>
+  <div class="hero-visual glass" id="heroVisual">
+    <div class="visual-top">
+      <span>Live Network / 08 Nodes</span>
+      <span id="hint">Hover a node</span>
+    </div>
+    <canvas id="network"></canvas>
+    <div class="network-help">
+      <span>Click a node to filter work</span>
+      <button id="allProjects">Show All</button>
+    </div>
+    <div id="tooltip"></div>
+  </div>
+</section>
+
+<section class="metrics shell glass reveal">
+  <div><strong data-count="20" data-suffix="+">0</strong><small>Power BI Dashboards</small><b>Visualization</b></div>
+  <div><strong data-count="30" data-suffix="+">0</strong><small>Excel Dashboards</small><b>Analytics</b></div>
+  <div><strong data-count="8">0</strong><small>Audit Rounds</small><b>Compliance</b></div>
+  <div><strong data-count="17">0</strong><small>Departments</small><b>Cross-Functional</b></div>
+  <div><strong data-count="1">0</strong><small>International Client</small><b>DPPM · Upwork</b></div>
+</section>
+
+<section id="simulator" class="shell simulator reveal">
+  <div class="heading">
+    <div>
+      <span class="eyebrow">Live System Simulator</span>
+      <h2>Change the load.<br><em>Watch the system respond.</em></h2>
+    </div>
+    <div id="state" class="state"><i></i><span>Stable</span></div>
+  </div>
+  <div class="sim-grid">
+    <div class="glass load">
+      <div class="control">
+        <span>Simulated System Load</span>
+        <strong id="loadValue">34%</strong>
+      </div>
+      <input id="slider" type="range" min="0" max="100" value="34">
+      <div class="scale"><span>Idle</span><span>Normal</span><span>High</span><span>Critical</span></div>
+      <div class="load-metrics">
+        <div><span>Processing</span><b id="processing">92%</b></div>
+        <div><span>Queue</span><b id="queue">12</b></div>
+        <div><span>Accuracy</span><b id="accuracy">98%</b></div>
+      </div>
+    </div>
+    <div class="glass terminal">
+      <div class="termbar"><span>● ● ●</span><b>system.log</b><em>live</em></div>
+      <div id="logs"></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="shell section reveal">
+  <div class="heading">
+    <div>
+      <span class="eyebrow">01 / Selected Work</span>
+      <h2>Less noise.<br><em>More signal.</em></h2>
+    </div>
+    <p>Every dashboard, report, and system should make information easier to understand and decisions easier to make.</p>
+  </div>
+  <div class="filter glass">Active Filter: <b id="filter">All Projects</b><button id="clear">Clear</button></div>
+  <div class="projects">
+    <article class="project glass" data-skills="power bi,dax,data visualization,analytics">
+      <div class="top">01 <span>Power BI · DPPM</span></div>
+      <h3>DPPM Dashboard</h3>
+      <div class="tabs">
+        <button class="active" data-tab="problem">Problem</button>
+        <button data-tab="solution">Solution</button>
+        <button data-tab="impact">Impact</button>
+      </div>
+      <p class="tab active" data-content="problem">Quality data needed a concise management view instead of scattered records and slow interpretation.</p>
+      <p class="tab" data-content="solution">Modeled quality data in Power BI with focused KPIs, DPPM views, trends, comparisons, and decision-oriented hierarchy.</p>
+      <p class="tab" data-content="impact">A specialized dashboard for an international client via Upwork, turning defect information into a clearer quality-performance view.</p>
+      <div class="chart">
+        <span>DPPM Trend</span>
+        <svg viewBox="0 0 700 150" preserveAspectRatio="none"><path d="M0 125 C70 116 100 85 150 96 S220 132 280 80 S350 52 405 72 S470 108 525 54 S610 36 700 16"/></svg>
+      </div>
+      <div class="tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span></div>
+    </article>
+
+    <article class="project glass" data-skills="excel,automation,reporting,xlookup">
+      <div class="top">02 <span>Excel · Analytics</span></div>
+      <h3>30+ Excel Dashboards</h3>
+      <div class="tabs">
+        <button class="active" data-tab="problem">Problem</button>
+        <button data-tab="solution">Solution</button>
+        <button data-tab="impact">Impact</button>
+      </div>
+      <p class="tab active" data-content="problem">Recurring reports required manual lookup, reconciliation, aggregation, and formatting.</p>
+      <p class="tab" data-content="solution">Combined boolean-based XLOOKUP, INDEX/MATCH, FILTER, UNIQUE, SUMIFS, nested formulas, pivots, and structured reporting.</p>
+      <p class="tab" data-content="impact">Reusable dashboards and reporting structures that reduce repetitive work and keep information readable.</p>
+      <div class="formula">
+        <div><b>XLOOKUP</b><span>Boolean Logic</span></div>
+        <div><b>SUMIFS</b><span>Aggregation</span></div>
+        <div><b>PIVOT</b><span>Summary</span></div>
+        <div><b>FILTER</b><span>Selection</span></div>
+      </div>
+      <div class="tags"><span>Excel</span><span>Automation</span><span>Reporting</span></div>
+    </article>
+
+    <article class="project glass" data-skills="iqc,excel,reporting,reconciliation">
+      <div class="top">03 <span>IQC · Reconciliation</span></div>
+      <h3>Incoming Rejection Reconciliation</h3>
+      <div class="tabs">
+        <button class="active" data-tab="problem">Problem</button>
+        <button data-tab="solution">Solution</button>
+        <button data-tab="impact">Impact</button>
+      </div>
+      <p class="tab active" data-content="problem">Incoming rejection records needed verification against PMC rejection data with model and material context.</p>
+      <p class="tab" data-content="solution">Compare IQC inspection incoming rejection and IQC line incoming rejection against PMC using SKD and material code.</p>
+      <p class="tab" data-content="impact">Clear exact-match statuses expose discrepancies without mixing incoming rejection with unrelated man-made scrap.</p>
+      <div class="flow"><span>IQC</span><i>→</i><span>PMC</span><i>→</i><span>Verify</span><i>→</i><strong>Status</strong></div>
+      <div class="tags"><span>IQC</span><span>Reconciliation</span><span>Quality</span></div>
+    </article>
+
+    <article class="project glass" data-skills="qms,audit,documentation,compliance">
+      <div class="top">04 <span>QMS · Documentation</span></div>
+      <h3>QMS Documentation System</h3>
+      <div class="tabs">
+        <button class="active" data-tab="problem">Problem</button>
+        <button data-tab="solution">Solution</button>
+        <button data-tab="impact">Impact</button>
+      </div>
+      <p class="tab active" data-content="problem">Documents and records require consistent control, revision, retrieval, and compliance follow-up.</p>
+      <p class="tab" data-content="solution">Document control, archive management, masterlists, revision tracking, audit reporting, NC/CAPA follow-up, and policy record control.</p>
+      <p class="tab" data-content="impact">A structured QMS workflow with clearer ownership, traceability, and cross-department visibility.</p>
+      <div class="flow"><span>Control</span><i></i><span>Archive</span><i></i><span>Revise</span><i></i><span>Verify</span></div>
+      <div class="tags"><span>QMS</span><span>Audit</span><span>Compliance</span></div>
+    </article>
+
+    <article class="project wide glass" data-skills="audit,qms,quality,data management,reporting">
+      <div class="top">05 <span>Quality · Reporting Architecture</span></div>
+      <h3>From Raw Records to Useful Information</h3>
+      <div class="tabs">
+        <button class="active" data-tab="problem">Problem</button>
+        <button data-tab="solution">Solution</button>
+        <button data-tab="impact">Impact</button>
+      </div>
+      <p class="tab active" data-content="problem">Operational data becomes difficult to act on when validation, context, and reporting are disconnected.</p>
+      <p class="tab" data-content="solution">Collect → Validate → Reconcile → Analyze → Visualize → Report → Follow Up.</p>
+      <p class="tab" data-content="impact">Management gets information with context rather than isolated numbers, while records remain traceable.</p>
+      <div class="architecture"><span>Raw Data</span><i></i><span>Validate</span><i></i><span>Analyze</span><i></i><span>Visualize</span><i></i><span>Act</span></div>
+      <div class="tags"><span>Data Management</span><span>Quality</span><span>Reporting</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="audit" class="shell section reveal">
+  <div class="heading">
+    <div>
+      <span class="eyebrow">02 / Internal Auditing</span>
+      <h2>Auditing is not<br><em>just finding gaps.</em></h2>
+    </div>
+    <p>The work extends into documentation, compliance reporting, record control, and follow-up across multiple departments.</p>
+  </div>
+  <div class="audit-grid">
+    <div class="audit-map glass">
+      <div class="core"><strong>8</strong><span>Audit Rounds</span></div>
+      <div class="orbit o1"></div>
+      <div class="orbit o2"></div>
+      <div class="orbit o3"></div>
+      <span class="dept d1">HR</span>
+      <span class="dept d2">Admin</span>
+      <span class="dept d3">Security</span>
+      <span class="dept d4">Payroll</span>
+      <span class="dept d5">Warehouse</span>
+      <span class="dept d6">QA/QC</span>
+      <span class="dept d7">IT</span>
+      <span class="dept d8">H&S</span>
+      <span class="dept d9">IQC</span>
+    </div>
+    <div class="audit-list glass">
+      <div><span>01</span><b>Gap Identification</b><p>Review evidence and identify documentation or compliance gaps.</p></div>
+      <div><span>02</span><b>Compliance Reporting</b><p>Author structured reports that make findings easy to understand and follow.</p></div>
+      <div><span>03</span><b>Documentation Streamlining</b><p>Improve how records are organized, controlled, retrieved, and maintained.</p></div>
+      <div><span>04</span><b>Policy Record Control</b><p>Serve as a central point of contact for company policy records.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="shell section reveal">
+  <div class="heading">
+    <div>
+      <span class="eyebrow">03 / Skillset</span>
+      <h2>Tools with a<br><em>reason to exist.</em></h2>
+    </div>
+    <p>Technical capability matters, but the standard is readable information, reliable logic, and useful outcomes.</p>
+  </div>
+  <div class="skills">
+    <div class="skill glass"><span>01</span><h3>Power BI</h3><p>Dashboard Design · DAX · Data Modeling · KPI Reporting · Quality Visualization</p></div>
+    <div class="skill glass"><span>02</span><h3>Advanced Excel</h3><p>Boolean XLOOKUP · INDEX/MATCH · FILTER · UNIQUE · SUMIFS · Nested Logic · Pivots</p></div>
+    <div class="skill glass"><span>03</span><h3>Quality Systems</h3><p>QMS · IQC · QA/QC · Incoming Quality · Rejection Analysis · Supplier Feedback · Inspection Reporting</p></div>
+    <div class="skill glass"><span>04</span><h3>Audit & Compliance</h3><p>Internal Auditing · Gap Identification · Compliance Reports · Documentation · Record Control</p></div>
+    <div class="skill glass"><span>05</span><h3>Data Management</h3><p>Validation · Reconciliation · Discrepancy Analysis · Structured Reporting · Management Information</p></div>
+    <div class="skill principle glass"><span>06</span><h3>Design Principle</h3><p>Minimal visual noise. Strong hierarchy. Meaningful metrics. No decoration without purpose.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="shell section contact reveal">
+  <div class="contact-card glass">
+    <div>
+      <span class="eyebrow">04 / Contact</span>
+      <h2>Have a data problem<br><em>worth simplifying?</em></h2>
+    </div>
+    <div>
+      <p>Dashboards · Reporting · Analytics · QMS · Quality Systems · Documentation</p>
+      <a class="email" href="mailto:attaullahkhokhar23@gmail.com">attaullahkhokhar23@gmail.com ↗</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/atta-ullah-k" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/The-great-attractor69" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span>Atta Ullah</span>
+    <span>Data · Quality · Systems</span>
+    <span>© 2026</span>
+  </footer>
+</section>
+</main>
+
+<div id="cli" class="modal">
+  <div class="cli-window glass">
+    <div class="cli-head"><span>● ● ●</span><b>atta@portfolio:~</b><button id="closeCli">ESC</button></div>
+    <div id="output">
+      <p class="muted">Welcome to the portfolio command center.</p>
+      <p>Type <b>help</b> to see available commands.</p>
+    </div>
+    <form id="command">
+      <span>atta@portfolio:~$</span>
+      <input id="input" autocomplete="off" spellcheck="false">
+    </form>
+  </div>
+</div>
+
+<div id="achievement" class="achievement glass">
+  <b>✓</b>
+  <span>
+    <strong>Exploration Progress</strong>
+    <small id="achievementText">0/5 sections discovered</small>
+  </span>
+</div>
+<canvas id="confetti"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
