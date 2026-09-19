@@ -1,4 +1,4 @@
-# atta ullah upgraded portfolio
+# Atta ullah 
 
 static github pages portfolio using html, css, javascript, and tailwind css via cdn.
 
